@@ -1,0 +1,1 @@
+{"E:\\Second project\\_ready_html\\gulpfile.js":{"sha1":"f5705feba5cf2e38e393130ff51d610e217407c8","tasks":{"express":{"name":"express","dependencies":""},"livereload":{"name":"livereload","dependencies":""},"styles":{"name":"styles","dependencies":""},"watch":{"name":"watch","dependencies":""},"default":{"name":"default","dependencies":"styles express livereload watch"}}}}

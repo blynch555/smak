@@ -1,0 +1,209 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+
+
+	.expand .expand_title
+		margin: 0 
+
+	.service
+		text-align: center
+		padding-top: 10px
+		.service_left
+			text-align: center
+			position: relative
+			top: 5px
+			float: none
+		.service_right
+			text-align: center
+			padding-left: 10px
+
+	.container_numbers
+		a
+			margin: 20px
+	.main-mnu
+		display: none
+		float: right
+		min-width: 350px
+		text-align: right
+		background-color: $Foth-color
+		top: 99px
+		position: absolute
+		border-bottom: #111821 4px solid
+		border-top: #232D3B 4px solid
+		right: 6px
+		z-index:9999 !important
+		ul
+			li
+				display: block
+				line-height: 0
+				padding: 0
+				&.active
+					a
+						background-color: #273646
+						text-decoration: none
+						font-family: "RobotoBold", $helvetica
+			a
+				display: block
+				line-height: 48px
+				padding: 0 20px
+				background-color: transparent
+				font-size: em(15px)
+				text-transform: uppercase
+				transition: all .5s ease
+				border-bottom: #222C36 1px solid
+				&::after
+					content: ''
+					display: none
+				&:hover
+					background-color: #273646
+					text-decoration: none
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 960px)
+	/**/ 
+	.awesome .awesome_container
+		text-align: center
+		.view
+			margin: 0 auto
+			
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+
+	.center-head
+		h1
+			padding: 0
+	
+	.expand .expand_title
+		margin: 0 
+
+	.second_menu
+		position: relative
+		margin: 50px 0
+		display: none
+		float: left
+		min-width: 350px
+		text-align: left
+		background-color: $Foth-color
+		border-bottom: #111821 4px solid
+		border-top: #232D3B 4px solid
+		z-index: 99999999!important
+		ul
+			li
+				display: block
+				line-height: 0
+				padding: 0
+				&.active
+					a
+						background-color: #273646
+						text-decoration: none
+						font-family: "RobotoBold", $helvetica
+			a
+				display: block
+				line-height: 48px
+				padding: 0 20px
+				background-color: transparent
+				font-size: em(15px)
+				text-transform: uppercase
+				transition: all .5s ease
+				border-bottom: #222C36 1px solid
+				&::after
+					content: ''
+					display: none
+				&:hover
+					background-color: #273646
+					text-decoration: none
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 659px)
+  
+	.center-head
+		top: 200px	
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 628px)
+  /**/
+	 	
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+  	
+	
+	.center-head
+		top: 115px
+	.header
+		background-color: $bg-color
+	.down
+		background-color: $bg-color
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+ 	.separ-3
+ 		&::after
+ 			display: none
+ 			
+ 	.separ
+ 		&::after
+ 			display: none
+
+	
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+	.second_menu
+		display: block !important
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+	.main-mnu
+		display: block !important
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px)
+	/**/
+

@@ -1,0 +1,598 @@
+@import "bourbon"
+@import "_var.sass"
+@import "../app/libs/Magnific-Popup/magnific-popup.sass"
+@import "../app/libs/owl/assets/owl.carousel.sass"
+
+*::-webkit-input-placeholder
+	color: #fff
+	opacity: 1
+
+*:-moz-placeholder
+	color: #fff
+	opacity: 1
+
+*::-moz-placeholder
+	color: #fff
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #fff
+	opacity: 1
+
+
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #fff
+body input:required:valid,
+body textarea:required:valid
+	color: #fff
+
+//---------Custom Styles Here----
+
+a:active, a:hover, a:focus
+	color: $main-color
+	text-decoration: underline
+	outline: none
+
+a
+	color:#ffffff
+
+h1, h2, h3, h4, h5, h6
+	line-height: em(22px)
+	font-family: "RobotoBold", $helvetica
+	font-weight: bold
+
+
+h1
+	font-size: em(64px)
+
+h2
+	font-size: em(30px)
+
+h3
+	font-size: em(25px)
+
+h4
+	font-size: em(16px)
+
+h5
+	font-size: em(20px)
+
+b, strong
+	font-family: "RalewayBold", $helvetica
+	font-weight: bold
+
+.hidden
+	display: none
+
+.before
+	content: ''
+	width: 100%
+	height: 100%
+	position: absolute
+	left: 0
+	top: 0
+
+.separ
+	position: relative
+	color: #000000
+	&::after
+		content: ''
+		width: 170px
+		height: 1px
+		z-index: 999
+		position: absolute
+		margin: 60px -240px
+		background-color: $main-color
+
+// ------------SECTION1------------------------------//
+.hiddenty
+	display: none
+
+.visiblet
+	display: none
+
+.section1
+	position: relative
+	text-align: center
+	min-height: 680px
+	padding: 60px 0
+	background-color: #fbfbfb
+	h4
+		color: $text-color
+		font-family: "Roboto", $helvetica
+	h5
+		color: #131316
+		text-transform: uppercase
+ 
+	h2
+		position: relative
+		color: #000000
+	
+	p
+		color: $text-color
+		font-size: em(16px)
+		font-family: "PFCentroSlabProMedium", $helvetica
+		opacity: 0.7
+
+.top_p		
+	padding-top: 20px
+
+.circle
+	
+	width: 100%
+	margin-top: 60px	
+
+.circle1
+	margin: 0 auto
+	position: relative
+	padding-top: 39px
+	border: 2px solid #4f4f51
+	border-radius: 50%
+	height: 110px
+	width: 110px
+	transition: all 1s ease
+	&:hover
+		border: none
+		background-color: $main-color
+		.visiblety
+			transition: all 1s ease
+			display: none
+		.hiddenty
+			transition: all 1s ease
+			display: block
+			position: absolute
+			left: 36px
+	
+.visiblety
+	position: absolute
+	left: 34px
+
+.circle2
+	margin: 0 auto
+	position: relative
+	padding-top: 35px
+	height: 110px
+	width: 110px
+	border-radius: 50%
+	border: none
+	background-color: $main-color
+	transition: all 1s ease
+	&:hover
+		border: 2px solid #4f4f51
+		background-color: transparent
+		.visiblet
+			transition: all 1s ease
+			display: block
+			position: absolute
+			left: 33px	
+		.hiddent
+			transition: all 1s ease
+			display: none
+
+.visiblet
+	display: none
+.hiddent
+	position: absolute
+	left: 33px			
+
+.circle3
+	@extend .circle2 
+.photo
+	left: 36px
+.circle4
+	@extend .circle2
+
+
+/*------------SECTION2----------------------------*/ 
+.section2
+	padding: 60px 0
+	text-align: center
+	background-color: #131a1d
+	min-height: 540px
+	h2
+		color: $main-color
+		
+	p
+		color: #ffffff
+		font-size: em(16px)
+		font-family: "PFCentroSlabProMedium", $helvetica
+		opacity: 0.8
+	h5
+		font-family: "RalewayRegular", $helvetica
+
+.section2_links
+	padding-top: 40px
+	margin: 0 auto
+	
+.progress
+	margin: 0 auto
+	width: 155px
+	height: 270px
+	&:hover
+		h5
+			transition: all 1s
+			color: #e8a516
+
+//----------SECTION3----------------------//
+.section3
+	position: relative
+	text-align: center
+	min-height: 890px
+	padding: 60px 0
+	background-color: #ffffff
+	h4
+		color: $text-color
+		font-family: "Roboto", $helvetica
+	h5
+		color: #131316
+		text-transform: uppercase
+ p
+		color: $text-color
+		font-size: em(16px)
+		font-family: "PFCentroSlabProMedium", $helvetica
+		opacity: 0.7
+
+.awesome
+	z-index: 99
+	display: block
+	padding-top: 40px
+	video
+		max-width: 100%
+		
+	.awesome_container
+		text-align: left
+		.view
+			display: block
+			width: 170px
+			height: 60px
+			background-color: $main-color
+			color: #ffffff
+			position: relative
+			padding: 18px 0
+			font-size: em(16px)
+			text-align: center
+			&:hover
+				background-color: #f2b40b
+				text-decoration: none
+		h3
+			color: $text-color
+			font-family: "Roboto", $helvetica	
+				
+		p
+			color: $text-color
+			font-size: em(16px)
+			font-family: "PFCentroSlabProMedium", $helvetica
+			opacity: 0.7
+
+.krest
+	transition: all 1s
+	display: block
+	position: absolute
+	right: 20px
+	z-index: 999999
+	&:hover
+		margin-top: 5px
+
+.filter_div
+	margin-bottom: 30px
+.s_portfolio
+	padding-top: 50px
+	ul,
+	li
+		list-style-type: none
+		padding: 0
+		margin: 0
+		text-align: center
+		display: inline-block
+	li
+		margin: 0 10px
+		text-transform: uppercase
+		cursor: pointer
+		line-height: 2
+		transition: all .5s ease
+		text-decoration: none
+		padding-right: 20px
+		color: #515151
+		font-family: "Roboto", $helvetica
+		font-weight: bold
+		font-size: em(16px)
+		&::after
+			content: ''
+			position: absolute
+			width: 5px
+			height: 5px
+			background-color: $main-color
+			margin: 12px 0 0 20px
+		&:hover
+			color: $main-color
+	li.active
+		color: $main-color
+	
+		
+.portfolio_item .port_item_cont
+	a
+		border-color: #fff
+		color: #fff	
+
+.portfolio_item
+	display: none
+	padding: 0
+	img
+		width: 100%
+	.port_item_cont
+		position: absolute
+		top: 0
+		left: 0
+		width: 100%
+		height: 100%
+		background-color: rgba(207,194,12,.5)
+		text-align: center
+		opacity: 0
+		transition: all .5s
+		padding-top: 0px
+	&:hover .port_item_cont
+		opacity: 1
+		padding-top: 20px
+	h3
+		color: #fff
+		margin-bottom: 0
+	p
+		color: #fff
+
+	a
+		background-color: transparent
+		color: #fff
+		border: #fff 1px solid
+		padding: 2px 10px
+		display: inline-block
+
+.podrt_descr
+	background-color: #fff
+	max-width: 500px
+	margin: auto
+	img
+		width: 100%
+		
+.modal-box-content
+	position: relative	
+
+.section3 
+	.section_bottom 
+		text-align: center
+		.down 
+			width: 60px
+			height: 60px
+			display: block
+			margin: 25px auto
+			border-radius: 2px
+			background-color: $main-color 
+			&:hover
+				background-color: #9DB000
+				img 
+					padding-top: 25px
+			img
+				padding: 20px
+				transition: all .5s
+		h2
+			color: #000000
+		p
+			color: $text-color
+			font-size: em(16px)
+			font-family: "PFCentroSlabProMedium", $helvetica
+			opacity: 0.7
+		.contact
+			display: block
+			width: 170px
+			height: 60px
+			background-color: $main-color
+			color: #ffffff
+			position: relative
+			padding: 18px 0
+			font-size: em(16px)
+			text-align: center
+			margin: 60px auto 0
+			&:hover
+				background-color: #f2b40b
+				text-decoration: none  
+
+//---------SECTION4--------------//
+.section4
+	padding: 60px 0
+	min-height: 400px
+	background-color: $Third-color
+	text-align: center
+	p
+		color: #fff
+		font-size: em(14px)
+		font-family: "PFCentroSlabProMedium", $helvetica
+		opacity: 0.7		
+
+.container_numbers
+	padding-top: 40px
+	p
+		color: $main-color
+	a
+		display: block
+		border: 1px solid $main-color
+		borde
+		&:hover
+			transition: all .5s
+			text-decoration: none
+			background-color: rgba(93,142,145,0.2)
+			transform: scale(1.1)
+
+//--------------SECTION5---------------//
+.section5
+	position: relative
+	text-align: center
+	min-height: 1200px
+	padding: 60px 0
+	background-color: #fbfbfb
+	h4
+		color: $text-color
+		font-family: "Roboto", $helvetica
+	h2
+		color: #000000
+	p
+		color: $text-color
+		font-size: em(14px)
+		font-family: "PFCentroSlabProMedium", $helvetica
+		opacity: 0.7	
+
+.separ-3
+	position: relative
+	color: #000000
+	display: inline-block
+	&::after
+		content: ''
+		width: 170px
+		display: block
+		height: 1px
+		position: absolute
+		margin: 20px 0px
+		background-color: $main-color
+		
+.service
+	position: relative
+	padding-top: 40px
+	.service_left
+		display: inline-block
+		position: relative
+		top: 20px
+		left: 0
+		float: left
+		transition: all 1s
+		img
+			width: 100%
+		&:hover
+			transform: rotate(360deg)
+
+	.service_right
+		text-align: left
+		padding-left: 40px
+		a
+			&:hover h4
+				color: $main-color
+				transition: all .5s
+
+
+.team
+	text-align: center
+	padding-top 30px 
+	position: relative
+	min-height: 500px
+	h4
+		color: $main-color
+		margin: 0
+		
+.team1
+	margin: 20px auto
+	padding: 0
+	img
+		width: 100% 
+		transition: all .5s
+	.port_item_cont
+		position: absolute
+		bottom: 0
+		left: 0
+		width: 100%
+		height: 100%
+		text-align: center
+		opacity: 0
+		padding-top: 20px
+		transition: all .5s
+	&:hover .port_item_cont
+		opacity: 1
+		padding-top: 100px
+	h3
+		color: #fff
+		margin-bottom: 0
+	p
+		color: #fff
+	a
+		background-color: transparent
+		color: #000
+		border: #000 1px solid
+		padding: 2px 10px
+		display: inline-block
+
+.expand
+	width: 100%
+	min-height: 300px
+	background-color: #0B0B0F
+	text-align: left
+	padding: 40px 0
+	.expand-title
+		margin: 0 0 0 200px
+		h4
+			color: $main-color
+		p
+			color: #fff
+			font-size: em(14px)
+			font-family: "PFCentroSlabProMedium", $helvetica
+			opacity: 0.7	
+
+.krest-2
+	transition: all 1s
+	display: block
+	position: absolute
+	right: 300px
+	z-index: 999999
+	margin-top: 57px
+	&:hover
+		margin-top: 63px
+.krest_hidden
+	margin-top: -100px
+	&:hover
+		margin-top: -95px
+.expand-social
+	width: 30px
+	height: 30px
+	display: inline-block
+	background-color: transparent
+	border: 1px solid #fff
+	text-align: center
+	margin-right: 20px
+	transition: all .5s
+	&:hover
+		background-color: $main-color
+
+.first
+	position: relative
+	display: block
+.second
+	position: relative
+	display: none
+.third
+	position: relative
+	display: none
+.foth
+	position: relative
+	display: none
+
+.expand-active-first
+	position: absolute
+	top: -60px
+	left: -70px
+.expand-active-second
+	position: absolute
+	top: -60px
+	left: 215px
+.expand-active-third
+	position: absolute
+	top: -60px
+	left: 500px
+.expand-active-foth
+	position: absolute
+	top: -60px
+	right: 58px	
+	display: block
+
+
+
+		
+//ALWAYS END
+@import "_media.sass"
+

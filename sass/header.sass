@@ -1,0 +1,231 @@
+@import "bourbon"
+
+@import "_var.sass"
+
+body
+	font-size: 15px
+	position: relative
+	line-height: em(22px)
+	font-family: "RalewayBold", $helvetica
+	overflow-x: hidden
+	margin: 0
+	padding: 0
+	color: #fff
+
+.header
+	background-color: $Second-color
+  
+
+.hidden
+
+	display: none
+
+a:active, a:hover, a:focus
+	color: $main-color
+	text-decoration: underline
+	outline: none
+
+a
+	color:#ffffff
+
+h1, h2, h3, h4, h5, h6
+	line-height: em(22px)
+	font-family: "RobotoBold", $helvetica
+	font-weight: bold
+
+
+h1
+	font-size: em(64px)
+
+h2
+	font-size: em(30px)
+
+h3
+	font-size: em(25px)
+
+h4
+	font-size: em(16px)
+
+b, strong
+	font-family: "RalewayBold", $helvetica
+	font-weight: bold
+
+
+.before
+	content: ''
+	width: 4px
+	height: 4px
+	position: absolute
+	left: 0
+	top: 0
+	background-color: $main-color
+
+// HEADER-------------------//
+.top_line
+	position: relative
+	background-color: $bg-color
+	height: 100px
+	width: 100%
+.logon
+	position: relative
+	float: left
+	img
+		margin-top: 16px
+	strong
+		margin: -30px 207px 0 40px
+		font-size: em(30px)
+		text-transform: uppercase
+		float: right
+	p
+		float: right
+		font-size: em(9px)
+		margin: -16px 195px 0 0
+		font-family: "RalewayBold", $helvetica
+		letter-spacing: 9px
+
+.ulmnu
+	list-style-type: none
+	margin: 0
+	padding: 0
+	li
+		display: inline-block
+
+.main-mnu
+	float: right
+	position: relative
+	li
+		padding-top: em(45px) 
+		font-size: em(16px)
+		display: inline-block
+		text-transform: uppercase
+		&.active
+			a
+				color: $main-color
+				text-decoration: none
+		a
+			padding-right: 40px
+			transition: all .5s ease
+			font-family: "RobotoBold", $helvetica
+			&::after
+				content: ''
+				position: absolute
+				width: 5px
+				height: 5px
+				background-color: $main-color
+				margin: 8px 0 0 20px
+			&:hover
+				color: $main-color
+				text-decoration: none
+	ul
+		@extend .ulmnu
+		li
+			a
+				text-decoration: none
+				color: #fff
+				
+
+.toggle-mnu 
+	float: right
+	position: absolute
+	right: 0
+	top: 0
+	text-align: center
+	line-height: 48px
+	display: block
+	width: 40px
+	height: 40px
+	margin: 40px auto 0
+	
+
+.toggle-mnu span:after,
+.toggle-mnu span:before 
+	content: ""
+	position: absolute
+	left: 0
+	top: 9px
+
+.toggle-mnu span:after
+	top: 18px
+
+.toggle-mnu span 
+	position: relative
+	display: block
+
+.toggle-mnu span,
+.toggle-mnu span:after,
+.toggle-mnu span:before
+	width: 100%
+	height: 2px
+	background-color: #fff
+	transition: all 0.3s
+	backface-visibility: hidden
+	border-radius: 2px
+	
+.toggle-mnu.on span 
+	background-color: transparent
+
+.toggle-mnu.on span:before 
+	transform: rotate(45deg) translate(-1px, 0px)
+
+.toggle-mnu.on span:after 
+	transform: rotate(-45deg) translate(6px, -7px)
+
+.toggle-mnu.on 
+	opacity: 1
+	visibility: none
+
+.main-head
+	min-height: 680px
+  
+	
+
+.center-head
+	position: absolute
+	top: 286px
+	background-color: $bg-color
+	padding-bottom: 40px
+	min-height: 280px
+	width: 100%
+	text-align: center
+	h1
+		padding: 0 50px
+	.button
+		margin: 0 auto
+		width: 219px
+		height: 58px
+		background-color: $main-color
+		text-align: center
+		&:hover
+			background-color: yellow
+		a
+			display: block
+			padding: 19px
+			color: #131316
+			font-size: em(20px)
+			font-family: "RobotoBold", $helvetica
+			font-weight: bold
+			transition: all 2s
+
+.down 
+	a
+		width: 60px
+		height: 60px
+		display: block
+		margin: 25px auto 0
+		border-radius: 2px
+		background-color: $main-color
+		&:hover
+			background-color: #9DB000
+			img 
+				padding-top: 25px
+		img
+			padding: 20px
+			transition: all .5s
+
+
+	
+	
+
+	
+	
+
