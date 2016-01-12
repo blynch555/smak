@@ -3,6 +3,11 @@
 @import "../app/libs/Magnific-Popup/magnific-popup.sass"
 @import "../app/libs/owl/assets/owl.carousel.sass"
 
+
+
+@mixin kerning($kerning)
+	letter-spacing: $kerning + px
+
 *::-webkit-input-placeholder
 	color: #fff
 	opacity: 1
@@ -62,6 +67,11 @@ h5
 b, strong
 	font-family: "RalewayBold", $helvetica
 	font-weight: bold
+.p
+	color: $text-color
+	font-size: em(16px)
+	font-family: "PFCentroSlabProMedium", $helvetica
+	opacity: 0.7
 
 .hidden
 	display: none
@@ -102,6 +112,7 @@ b, strong
 	h4
 		color: $text-color
 		font-family: "Roboto", $helvetica
+		p
 	h5
 		color: #131316
 		text-transform: uppercase
@@ -120,7 +131,6 @@ b, strong
 	padding-top: 20px
 
 .circle
-	
 	width: 100%
 	margin-top: 60px	
 
@@ -132,7 +142,7 @@ b, strong
 	border-radius: 50%
 	height: 110px
 	width: 110px
-	transition: all 1s ease
+	transition: all .5s ease
 	&:hover
 		border: none
 		background-color: $main-color
@@ -158,7 +168,7 @@ b, strong
 	border-radius: 50%
 	border: none
 	background-color: $main-color
-	transition: all 1s ease
+	transition: all .5s ease
 	&:hover
 		border: 2px solid #4f4f51
 		background-color: transparent
@@ -209,7 +219,12 @@ b, strong
 .progress
 	margin: 0 auto
 	width: 155px
-	height: 270px
+	height: 260px
+	img
+		&:hover
+			transition: all .5s
+			transform: translate(5px)
+
 	&:hover
 		h5
 			transition: all 1s
@@ -271,12 +286,17 @@ b, strong
 	display: block
 	position: absolute
 	right: 20px
-	z-index: 999999
+	z-index: 999
 	&:hover
 		margin-top: 5px
 
 .filter_div
 	margin-bottom: 30px
+
+
+// img.push
+// 	max-width: 400px
+
 .s_portfolio
 	padding-top: 50px
 	ul,
@@ -316,18 +336,23 @@ b, strong
 		border-color: #fff
 		color: #fff	
 
+
 .portfolio_item
 	display: none
 	padding: 0
+	height: 200px
 	img
-		width: 100%
+		width: 100% 
+		height: 100%	
+	
+
 	.port_item_cont
 		position: absolute
 		top: 0
 		left: 0
 		width: 100%
 		height: 100%
-		background-color: rgba(207,194,12,.5)
+		background-color: rgba(214,173,11,.9)
 		text-align: center
 		opacity: 0
 		transition: all .5s
@@ -350,14 +375,17 @@ b, strong
 
 .podrt_descr
 	background-color: #fff
-	max-width: 500px
-	margin: auto
-	img
-		width: 100%
+	padding: 0
+	margin: 0 auto
+	max-height: 400px
+	max-width: 600px
+	img	
+		width: 600px
+		height: 400px
 		
 .modal-box-content
 	position: relative	
-
+	
 .section3 
 	.section_bottom 
 		text-align: center
@@ -366,10 +394,8 @@ b, strong
 			height: 60px
 			display: block
 			margin: 25px auto
-			border-radius: 2px
 			background-color: $main-color 
 			&:hover
-				background-color: #9DB000
 				img 
 					padding-top: 25px
 			img
@@ -411,12 +437,16 @@ b, strong
 
 .container_numbers
 	padding-top: 40px
+	span
+		font-size: em(30px)
+		font-family: "RobotoBold", $helvetica
+		font-weight: bold
 	p
 		color: $main-color
 	a
 		display: block
 		border: 1px solid $main-color
-		borde
+		padding-top: 20px
 		&:hover
 			transition: all .5s
 			text-decoration: none
@@ -428,13 +458,14 @@ b, strong
 	position: relative
 	text-align: center
 	min-height: 1200px
-	padding: 60px 0
+	padding-top: 60px 
 	background-color: #fbfbfb
 	h4
 		color: $text-color
 		font-family: "Roboto", $helvetica
 	h2
 		color: #000000
+		margin-top: 6px
 	p
 		color: $text-color
 		font-size: em(14px)
@@ -467,7 +498,8 @@ b, strong
 		img
 			width: 100%
 		&:hover
-			transform: rotate(360deg)
+			transition: all .5s
+			transform: translate(5px)
 
 	.service_right
 		text-align: left
@@ -525,7 +557,7 @@ b, strong
 	text-align: left
 	padding: 40px 0
 	.expand-title
-		margin: 0 0 0 200px
+		padding: 0 200px 0 200px
 		h4
 			color: $main-color
 		p
@@ -538,15 +570,12 @@ b, strong
 	transition: all 1s
 	display: block
 	position: absolute
-	right: 300px
-	z-index: 999999
+	right: 200px
 	margin-top: 57px
+	z-index: 999
 	&:hover
-		margin-top: 63px
-.krest_hidden
-	margin-top: -100px
-	&:hover
-		margin-top: -95px
+		margin-top: 60px
+
 .expand-social
 	width: 30px
 	height: 30px
@@ -554,6 +583,7 @@ b, strong
 	background-color: transparent
 	border: 1px solid #fff
 	text-align: center
+	padding-top: 2px
 	margin-right: 20px
 	transition: all .5s
 	&:hover
@@ -575,24 +605,285 @@ b, strong
 .expand-active-first
 	position: absolute
 	top: -60px
-	left: -70px
+	left: 125px
 .expand-active-second
 	position: absolute
 	top: -60px
-	left: 215px
+	left: 414px
 .expand-active-third
 	position: absolute
 	top: -60px
-	left: 500px
+	right: 414px
 .expand-active-foth
 	position: absolute
 	top: -60px
-	right: 58px	
-	display: block
+	right: 125px	
+
+	//-----------SECTION6--------------------// 
+.section6
+	min-height: 450px
+	text-align: center
+	padding: 60px 0
+	background-color: $Third-color
+	p
+		@extend .p
+		color: #fff
+
+.skills-items
+	padding-top: 40px
+	h3
+		color: $main-color
+		font-family: "Roboto", $helvetica
+		font-size: em(21px)
+		position: relative
+	a
+
+		&:hover 
+			img
+				transform: rotate(360deg)
+				transition: all 1s
+			h3
+				transition: all 1s
+				color: #fff
+
+.master
+	position: relative
+	h3.procent
+		position: absolute
+		top: -40px
+		left: 45px
+		font-size: em(35px)
+		font-family: "Roboto", $helvetica
+		font-weight: normal
+		span
 
 
 
-		
+//----------SECTION7----------------//
+.section7
+	min-height: 550px
+	text-align: center
+	padding: 60px 0
+	h4
+		color: $text-color
+		font-family: "Roboto", $helvetica
+	h2		
+		position: relative
+		display: inline-block
+		margin-top: 10px
+		color: #000
+		&:after
+			content: ''
+			width: 170px
+			display: block
+			height: 1px
+			z-index: 999
+			margin: 23px 0 0 120px
+			position: absolute
+			background-color: $main-color
+	p
+		@extend .p
+
+.owl-carousel
+	padding-bottom: 40px
+	.item
+		margin: 40px 0
+		text-align: center
+		&:hover img
+			transition: all 1s
+			transform: translate(10px)
+	.owl-buttons 
+		.owl-prev
+			height: 30px
+			width: 30px
+			background-image: url(img/icons/section_7/arrow-left.png)
+			background-repeat: no-repeat
+			background-position: 9px 9px
+			display: inline-block
+			margin: 0 10px
+			transition: all .25s ease
+			background-color: $main-color
+			&:hover
+				background-color: #131316
+		.owl-next
+			@extend .owl-prev
+			background-image: url(img/icons/section_7/arrow-right.png)
+			
+
+
+
+//------------SECTION8---------------//
+.section8
+	text-align: center
+	min-height: 300px
+	background-color: $Third-color
+
+.owl-carousel-2
+	text-align: center
+	margin: 0
+	h5
+		color: #fff	
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-weight: normal
+	h4
+		color: #fff	
+		position: relative
+		display: inline-block
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-weight: normal
+
+		&:after
+			content: ''
+			width: 170px
+			display: block
+			height: 1px
+			z-index: 999
+			margin: -36px 0 0 -25px
+			position: absolute
+			background-color: $main-color
+	.owl-item
+		position: relative
+		padding: 0
+		margin-bottom: 20px
+		margin-top: 30px
+	.owl-controls
+		.owl-pagination
+			.owl-page	
+				display: inline-block
+				width: 7px
+				height: 7px
+				background-color: #fff	
+				margin: 0 7px
+			.active
+				background-color: $main-color
+
+//---------SECTION9-------------------------//
+.section9
+	min-height: 500px
+	padding: 60px 0
+	background-color: #fbfbfb
+	text-align: center
+	h5
+		color: #131316
+		font-family: "Roboto", $helvetica
+		&:hover
+			color: $main-color
+			transition: all .5s
+
+	h4
+		color: $text-color
+		font-family: "Roboto", $helvetica
+	h2		
+		position: relative
+		display: inline-block
+		margin-top: 10px
+		color: #000
+		&:after
+			content: ''
+			width: 170px
+			height: 1px
+			z-index: 999
+			margin: 60px 0 0 -255px
+			position: absolute
+			background-color: $main-color
+	p.top_p 
+		color: $text-color
+		font-size: em(16px)
+		font-family: "PFCentroSlabProMedium", $helvetica
+		opacity: 0.7
+	p
+		@extend p.top_p
+.info
+	margin-top: 40px
+	img
+		&:hover
+			transition: all .5s
+			transform: translate(5px)
+//----------SECTION10-------------------------//
+.section10
+	min-height: 650px
+	padding: 60px 0
+	background-color: $Third-color
+	text-align: center
+	p
+		color: #fff	
+		font-family: "PFCentroSlabProMedium", $helvetica
+		font-weight: normal
+
+
+.main-form
+	margin-top: 40px
+	button
+		border: none
+		background-color: $main-color
+		color: $text-color
+		width: 200px
+		height: 60px
+		font-size: em(16px)
+		margin-top: 25px
+		&:hover
+			color: #fff
+			transition: all .5s
+	.form-group
+		display: block
+		margin-bottom: 20px	
+		.text-danger
+			font-size: em(14px)
+			margin-top: 5px
+			display: block
+			color: #e7464d
+			ul,
+			li
+				margin: 0
+				padding: 0
+				list-style-type: none
+		input
+			display: block
+			width: 100%
+			border: 1px solid #ccc
+			height: 60px
+			margin-top: 5px
+			text-indent: 12px
+			font-size: em(12px)
+			background-color: transparent
+		textarea
+			display: block
+			width: 100%
+			height: 220px
+			border: 1px solid #ccc
+			text-indent: 12px
+			padding-top: 20px
+			background-color: transparent
+
+//--------------FOOTER-----------------------------------//
+.footer
+	min-height: 170px
+	padding: 35px 0 0 0
+	background-color: $Foth-color
+	text-align: center
+	.footer-smak
+		color: $main-color
+	h4
+		color: #fff
+		font-family: "Roboto", $helvetica
+	.footer-a
+		margin-right: 20px
+		&:hover img
+			transform: scale(1.1)
+	.arrow-up
+		margin: 30px auto 0
+		width: 60px
+		height: 60px
+		display: block
+		padding: 18px
+		background-color: $main-color		
+		&:hover
+			padding: 13px
+			transition: all .5s
+
+	
+			
+
 //ALWAYS END
 @import "_media.sass"
 
