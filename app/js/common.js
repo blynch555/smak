@@ -1,11 +1,19 @@
 $(document).ready(function() {
 
+	// Фикcированная шапка при скролле
+			$(".top_line").removeClass("default");
+			$(window).scroll(function(){
+				if ($(this).scrollTop() > 20) {
+					$(".top_line").addClass("default").fadeIn('fast');
+				} else {
+					$(".top_line").removeClass("default").fadeIn('fast');
+				};
+			});
+			
+	//валидатор для формы
 	$("input, textarea").jqBootstrapValidation();
 
-	$(".scroll-to, .scroll-down, .arrow-up, .main-mnu a").mPageScroll2id({
-  scrollSpeed: 900
-});
-
+	//карусель
 	$("#owl-2").owlCarousel({
 		  items : 1, //10 items above 1000px browser width
       itemsDesktop : [1000,1], //5 items between 1000px and 901px
@@ -20,7 +28,7 @@ $(document).ready(function() {
 		  pagination : true,
    		paginationNumbers: false
 	});
-
+	//вторая карусель
     $("#owl").owlCarousel({
         items : 5,
         itemsCustom : false,
@@ -38,15 +46,23 @@ $(document).ready(function() {
 		    paginationNumbers: false
 		    });
  
+   //сортировка картинок
+	$("#portfolio_grid").mixItUp();
 
-$("#portfolio_grid").mixItUp();
-
+	//добавление активности ссылкам
 	$(".s_portfolio li, .main-mnu li").click(function() {
 	$(".s_portfolio li, .main-mnu li").removeClass("active");
 		$(this).addClass("active");
 	});
 
-$('.popup-gallery').magnificPopup({
+ //роздаем id для попапа
+	$(".portfolio_item").each(function(i) {
+			$(this).find("a").attr("href", "#work_" + i);
+			$(this).find(".podrt_descr").attr("id", "work_" + i);
+		});
+
+	//Попап для картинок
+	$('.popup-gallery').magnificPopup({
 		delegate: 'a',
 		type: 'inline',
 		mainClass: 'mfp-img-mobile',
@@ -56,61 +72,59 @@ $('.popup-gallery').magnificPopup({
 			preload: [0,1] // Will preload 0 - before current, and 1 after the current image
 		},
 	});
-
-$(".portfolio_item").each(function(i) {
-		$(this).find("a").attr("href", "#work_" + i);
-		$(this).find(".podrt_descr").attr("id", "work_" + i);
+	//навигацыя по сайту
+ 	$(".scroll-to, .scroll-down, .arrow-up, .main-mnu ul a").mPageScroll2id({
+  scrollSpeed: 900,
+  offset: 60
 	});
+	//менюшка
+	$(".toggle-mnu").click(function() {
+			$(this).toggleClass("on");
+			$(".main-mnu").slideToggle();
+			return false;
+		});
 
-$(".toggle-mnu").click(function() {
-		$(this).toggleClass("on");
-		$(".main-mnu").slideToggle();
-		return false;
-	});
+	// 2-я менюшка
+	$(".toggle-menu").click(function() {
+			$(this).toggleClass("in");
+			$(".second_menu").slideToggle();
+			return false;
+		});
 
-$(".toggle-menu").click(function() {
-		$(this).toggleClass("in");
-		$(".second_menu").slideToggle();
-		return false;
-	});
-
+ //скрытие, открытие блока с видео
   $("A#trigger").click(function() { 
-     // Отображаем скрытый блок 
-    	$("DIV#box").slideToggle(); // fadeIn - плавное появление
-     	return false; // не производить переход по ссылке
+    	$("DIV#box").slideToggle(); 
+     	return false; 
     });
-  
+  //скрытие, открытие блока с описанием сотрудников
   $("A#trigger-2").click(function() { 
-     // Отображаем скрытый блок 
-     	$("#expand").slideToggle(); // fadeIn - плавное появление
-      $(this).toggleClass("krest_hidden")
-     return false; // не производить переход по ссылке
+     	$("#expand").slideToggle(); 
+     return false; 
      });
       
- 	
-    
-
+   // Смена описания сотрудников
     $("#active-expand-first").click(function() {
-               $("#expand-title-first").css('display','block');
-               $("#expand-title-second, #expand-title-third, #expand-title-foth").css('display','none');
+               $("#expand-title-first").show(1000);
+               $("#expand-title-second, #expand-title-third, #expand-title-foth").hide(1000);
                 return false;                     
             });   
     $("#active-expand-second").click(function() {
-               $("#expand-title-second").css('display','block');
-                $("#expand-title-first, #expand-title-third, #expand-title-foth").css('display','none'); 
+               $("#expand-title-second").show(1000);
+                $("#expand-title-first, #expand-title-third, #expand-title-foth").hide(1000); 
                 return false;                     
             });  
     $("#active-expand-third").click(function() {
-               $("#expand-title-third").css('display','block');
-                $("#expand-title-second, #expand-title-first, #expand-title-foth").css('display','none'); 
+               $("#expand-title-third").show(1000);
+                $("#expand-title-second, #expand-title-first, #expand-title-foth").hide(1000); 
                 return false;                     
             });  
     $("#active-expand-foth").click(function() {
-               $("#expand-title-foth").css('display','block');
-                $("#expand-title-second, #expand-title-third, #expand-title-first").css('display','none'); 
+               $("#expand-title-foth").show(1000);
+                $("#expand-title-second, #expand-title-third, #expand-title-first").hide(1000); 
                 return false;                     
             });  
-   
+
+   //анимацыя чисел
  	$(".container_numbers").waypoint(function() {
 		$({blurRadius: 5}).animate({blurRadius: 0}, {
 			duration: 2000,
@@ -127,7 +141,6 @@ $(".toggle-menu").click(function() {
 			var tcount = $(this).data("count");
 			$(this).animateNumber({ number: tcount,
 				easing: 'easeInQuad',
-				// "font-size": "1em",
 				numberStep: comma_separator_number_step},
 				2000);
 		});
@@ -161,9 +174,6 @@ $(".toggle-menu").click(function() {
 	}, {
 		offset: '20%'
 	});
-
-
-           
 
 	//Цели для Яндекс.Метрики и Google Analytics
 	$(".count_element").on("click", (function() {
@@ -206,7 +216,9 @@ $(".toggle-menu").click(function() {
 
 	};
 
+	//запрещает перетягевать картинки при нажатии на них
 	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+
 
 });
 

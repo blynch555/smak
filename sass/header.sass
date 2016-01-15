@@ -4,6 +4,7 @@
 
 body
 	font-size: 15px
+	background-color: $Second-color
 	position: relative
 	line-height: em(22px)
 	font-family: "RalewayBold", $helvetica
@@ -11,13 +12,7 @@ body
 	margin: 0
 	padding: 0
 	color: #fff
-
-.header
-	background-color: $Second-color
-  
-
 .hidden
-
 	display: none
 
 a:active, a:hover, a:focus
@@ -50,7 +45,6 @@ b, strong
 	font-family: "RalewayBold", $helvetica
 	font-weight: bold
 
-
 .before
 	content: ''
 	width: 4px
@@ -61,16 +55,43 @@ b, strong
 	background-color: $main-color
 
 // HEADER-------------------//
-.top_line
+.header
 	position: relative
+	background-color: $Second-color
+	min-height: 1005px
+	.down 
+		position: absolute
+		bottom: 0
+		left: 5%
+		right: 5%
+		a
+			width: 60px
+			height: 60px
+			display: block
+			margin: 0 auto 
+			background-color: $main-color
+			&:hover
+				img 
+					padding-top: 25px
+			img
+				padding: 20px
+				transition: all .5s
+
+.top_line.default 
+	position: fixed
+	top: 0
+	z-index: 99999
+	box-shadow: 0 1px 2px #FFE700
+	   
+.top_line
 	background-color: $bg-color
-	height: 100px
+	height: 80px
 	width: 100%
 .logon
 	position: relative
 	float: left
 	img
-		margin-top: 16px
+		margin-top: 7px
 	strong
 		margin: -30px 207px 0 40px
 		font-size: em(30px)
@@ -94,7 +115,7 @@ b, strong
 	float: right
 	position: relative
 	li
-		padding-top: em(45px) 
+		padding-top: em(33px) 
 		font-size: em(16px)
 		display: inline-block
 		text-transform: uppercase
@@ -174,17 +195,12 @@ b, strong
 	opacity: 1
 	visibility: none
 
-.main-head
-	min-height: 680px
-  
-	
-
 .center-head
 	position: absolute
-	top: 286px
+	top: 320px
 	background-color: $bg-color
 	padding-bottom: 40px
-	min-height: 280px
+	min-height: 370px
 	width: 100%
 	text-align: center
 	h1
@@ -205,20 +221,9 @@ b, strong
 			font-family: "RobotoBold", $helvetica
 			font-weight: bold
 			transition: all 2s
+			text-decoration: none
 
-.down 
-	a
-		width: 60px
-		height: 60px
-		display: block
-		margin: 25px auto 0
-		background-color: $main-color
-		&:hover
-			img 
-				padding-top: 25px
-		img
-			padding: 20px
-			transition: all .5s
+
 
 
 	
